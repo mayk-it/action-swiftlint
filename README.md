@@ -56,7 +56,7 @@ jobs:
 
 ## Author
 
-Norio Nomura
+Norio Nomura (Modified By Jeremy Klein)
 
 ## License
 
