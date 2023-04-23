@@ -20,7 +20,7 @@ jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       // Simple usage
       - name: GitHub Action for SwiftLint
         uses: ezraberch/action-swiftlint@3.2.3
