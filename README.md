@@ -20,13 +20,13 @@ jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       // Simple usage
       - name: GitHub Action for SwiftLint
-        uses: mayk-it/action-swiftlint@3.2.2
+        uses: ezraberch/action-swiftlint@3.2.3
       // With custom argument
       - name: GitHub Action for SwiftLint with --strict
-        uses: mayk-it/action-swiftlint@3.2.2
+        uses: ezraberch/action-swiftlint@3.2.3
         with:
           args: --strict
       // Only checks files changed in the PR
@@ -34,13 +34,13 @@ jobs:
         run: |
           git fetch --prune --no-tags --depth=1 origin +refs/heads/${{ github.base_ref }}:refs/heads/${{ github.base_ref }}
       - name: GitHub Action for SwiftLint (Only files changed in the PR)
-        uses: mayk-it/action-swiftlint@3.2.2
+        uses: ezraberch/action-swiftlint@3.2.3
         env:
           DIFF_BASE: ${{ github.base_ref }}
           DIFF_HEAD: HEAD
       // Runs on different workspace
       - name: GitHub Action for SwiftLint (Different working directory)
-        uses: mayk-it/action-swiftlint@3.2.2
+        uses: ezraberch/action-swiftlint@3.2.3
         env:
           WORKING_DIRECTORY: Source
 ```
